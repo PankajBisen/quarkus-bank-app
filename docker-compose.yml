@@ -1,0 +1,23 @@
+#version: "3.8"  # Specify your Docker Compose version
+#
+#services:
+#  # Your Quarkus application service
+#  quarkus-app:
+#    build: .  # Replace with the path to your Quarkus project directory
+#    ports:
+#      - "8080:8080"  # Expose port 8080 of the container
+#    environment:
+#      # Database connection details
+#      quarkus.datasource.jdbc.url: jdbc:postgresql://localhost:5432/QuarkusBankApp
+#      quarkus.datasource.jdbc.username: postgres
+#      quarkus.datasource.jdbc.password: root  # Store password securely (see tip below)
+#    depends_on:
+#      - postgres  # Ensure the database starts before the application
+#
+#  # PostgreSQL database service
+#  postgres:
+#    image: postgres
+#    environment:
+#      POSTGRES_PASSWORD: root  # Set a strong password for the superuser (see tip below)
+#    ports:
+#      - "5432:5432"  # Expose port 5432 of the container (default port for PostgreSQL)
